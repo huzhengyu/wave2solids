@@ -3,11 +3,13 @@ olaFluid
 # Description
 [olaFuid](https://github.com/huzhengyu/olaFluid) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://github.com/phicau/olaFlow) and the fluid-strucutre-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
 
-This free and open source project is committed to enable fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
+This free and open-source project is committed to enabling the fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
+
+The paper for implementing this model has been submitted to Coastal Engineering.
 
 # Download and compilation
 ## Basic download guide
-To get setup, you must first install [foam-extend-4.0](https://github.com/Unofficial-Extend-Project-Mirror/foam-extend-foam-extend-4.0).
+To get set up, you must first install [foam-extend-4.0](https://github.com/Unofficial-Extend-Project-Mirror/foam-extend-foam-extend-4.0).
 
 To get a copy of [olaFlow](https://github.com/phicau/olaFlow) source and reference materials, run in a terminal:
 
@@ -25,18 +27,16 @@ To get a copy of the combined fluid model [olaFuid](https://github.com/huzhengyu
 
 `git clone https://github.com/huzhengyu/olaFluid.git`
 
-Make some modifications in the comilation files, run in a terminal:
+Make some modifications in the compilation files, run in a terminal:
 
 `sed -i '35i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
 
 `echo "\ -lwaveGeneration \ -lwaveAbsorption" >> ../Make/options`
     
-`echo "\
-    -lwaveGeneration \
-    -lwaveAbsorption" >> ../../../applications/solvers/solids4Foam/Make/options`
+`echo "\ -lwaveGeneration \ -lwaveAbsorption" >> ../../../applications/solvers/solids4Foam/Make/options`
 
 ## Basic compilation guide
-Compilation is straightforward, simply run the following script from the [olaFlow](https://olaflow.github.io) base folder:
+The compilation is straightforward, simply run the following script from the [olaFlow](https://olaflow.github.io) base folder:
 
 `./allMake`
 
@@ -48,11 +48,11 @@ Also, simply run the following script from the [solids4Foam](https://bitbucket.o
 # Tutorials
 A tutorial case of a flexible wall in nonlinear periodic waves is provided.
 
-Go to the Tutorials/Wall folder, and run in terminal:
+Go to the Tutorials/Wall folder, and run in a terminal:
 
 `./Allrun`
 
-Feel free to modify the phrase and adapt it for your own needs.
+Feel free to modify the phrase and adapt it to your own needs.
 
 # References
 Higuera, P., Lara, J.L. and Losada, I.J., 2013. Realistic wave generation and active wave absorption for navier–stokes models: Application to openfoam®. Coastal Engineering, 71: 102-118.
