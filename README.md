@@ -11,7 +11,7 @@ To get setup, you must first install [foam-extend-4.0](https://github.com/Unoffi
 
 To get a copy of [olaFlow](https://github.com/phicau/olaFlow) source and reference materials, run in a terminal:
 
-`git clone git://github.com/phicau/olaFlow.git`
+`git clone https://github.com/phicau/olaFlow.git`
 
 To get a copy of [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) source and reference materials, run in a terminal:
 
