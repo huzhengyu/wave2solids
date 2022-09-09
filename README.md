@@ -5,7 +5,7 @@ olaFluid
 
 This free and open-source project is committed to enabling the fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
 
-The paper for implementing this model has been submitted to Coastal Engineering.
+The paper for implementing and applying this model has been submitted to Coastal Engineering.
 
 # Download and compilation
 ## Basic download guide
