@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.0                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fsiProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//fluidSolidInterface    fixedRelaxation;
+fluidSolidInterface    Aitken;
+//fluidSolidInterface    IQNILS;
+//fluidSolidInterface weakCoupling;
+
+"fixedRelaxationCoeffs|AitkenCoeffs|IQNILSCoeffs"
+{
+    // Solid interface patch list
+    solidPatch seawall;
+
+    // Fluid interface patch list
+    fluidPatch seawall;
+
+    // Fixed under-relaxation factor for first FSI iteration
+    relaxationFactor 0.25;
+
+    relaxationFactorMax 1;
+    
+    //additionalMeshCorrection yes;
+
+    // Optional: if any point on the fluid interface moves greater than the
+    // interfaceDeformationLimit then the entire fluid mesh is updated; if not
+    // then only the interface points are moved and the remaining fluid mesh is
+    // not. Note that interfaceDeformationLimit is a relative motion: it is the
+    // point displacement normalised with respect to the local cell size (delta
+    // coeffs are used)
+    // Defaults to 0.0 i.e. the fluid mesh is always updated
+    // Limit for enabling fluid mesh motion solver
+    interfaceDeformationLimit 0;
+
+    // FSI loop tolerance
+    outerCorrTolerance 1e-5;
+
+    // FSI max correctors
+    nOuterCorr 60;
+
+    // Enable FSI coupling
+    coupled yes;
+    // Optional: if coupled is set to "no", then the couplingStartTime allows
+    // you to enable coupling at a specified time
+    // Defaults to 0.0
+    //couplingStartTime    8;
+
+    // Optional (only for IQNILS): re-use modes from previous time-steps.
+    // The number of modes to be re-used is specified
+    // Defaults to 0 modes
+    // couplingReuse 0;
+
+    interfaceTransferMethod directMap;
+    //interfaceTransferMethod RBF;
+    //interfaceTransferMethod GGI;
+    //interfaceTransferMethod AMI;
+
+    // Frequency of time-step at which the fluid-solid interface interpolation
+    // weights are updated
+    // 0 means there will be no interpolator update during simulation, whereas
+    // 10 means the interpolator will be updated every 10 time-steps
+    // Defaults to 0
+    // interpolatorUpdateFrequency 0;
+}
+
+weakCouplingCoeffs
+{
+    // Solid interface patch list
+    solidPatch seawall;
+
+    // Fluid interface patch list
+    fluidPatch seawall;
+}
+// ************************************************************************* //
