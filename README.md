@@ -27,7 +27,7 @@ To get a copy of the combined fluid model [olaFuid](https://github.com/huzhengyu
 
 Make some modifications in the comilation files, run in a terminal:
 
-`sed -i 'N;35 i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
+`sed -i '35i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
 
 `echo "\
     -lwaveGeneration \
