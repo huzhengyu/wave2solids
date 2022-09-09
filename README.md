@@ -1,7 +1,7 @@
 olaFluid
 ======
 # Description
-[olaFuid](https://github.com/huzhengyu/olaFluid) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://olaflow.github.io) and the fluid-strucutre-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
+[olaFuid](https://github.com/huzhengyu/olaFluid) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://github.com/phicau/olaFlow) and the fluid-strucutre-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
 
 This free and open source project is committed to enable fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
 
@@ -9,7 +9,7 @@ This free and open source project is committed to enable fully-coupled simulatio
 ## Basic download guide
 To get setup, you must first install [foam-extend-4.0](https://github.com/Unofficial-Extend-Project-Mirror/foam-extend-foam-extend-4.0).
 
-To get a copy of [olaFlow](https://olaflow.github.io) source and reference materials, run in a terminal:
+To get a copy of [olaFlow](https://github.com/phicau/olaFlow) source and reference materials, run in a terminal:
 
 `git clone git://github.com/phicau/olaFlow.git`
 
