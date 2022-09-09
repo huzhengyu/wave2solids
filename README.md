@@ -19,7 +19,7 @@ To get a copy of [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-
 
 Go to the [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) base folder and change to fluidModels directory:
 
-`cd ./src/solids4FoamModels/fluidModels/`
+`cd solids4foam-release/src/solids4FoamModels/fluidModels/`
 
 To get a copy of the combined fluid model [olaFuid](https://github.com/huzhengyu/olaFluid), run in a terminal:
 
