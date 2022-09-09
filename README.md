@@ -25,6 +25,18 @@ To get a copy of the combined fluid model [olaFuid](https://github.com/huzhengyu
 
 `git clone https://github.com/huzhengyu/olaFluid.git`
 
+Make some modifications in the comilation files, run in a terminal:
+
+`sed -i 'N;35 i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
+
+`echo "\
+    -lwaveGeneration \
+    -lwaveAbsorption" >> ../Make/options`
+    
+`echo "\
+    -lwaveGeneration \
+    -lwaveAbsorption" >> ../../../applications/solvers/solids4Foam/Make/options`
+
 ## Basic compilation guide
 Compilation is straightforward, simply run the following script from the [olaFlow](https://olaflow.github.io) base folder:
 
@@ -35,8 +47,16 @@ Also, simply run the following script from the [solids4Foam](https://bitbucket.o
 `./Allwmake`
 
 
-# References and tutorials
+# Tutorials
+A tutorial case of a flexible wall in nonlinear periodic waves is provided.
 
+Go to the Tutorials/Wall folder, and run in terminal:
+
+`./Allrun`
+
+Feel free to modify the phrase and adapt it for your own needs.
+
+# References
 Higuera, P., Lara, J.L. and Losada, I.J., 2013. Realistic wave generation and active wave absorption for navier–stokes models: Application to openfoam®. Coastal Engineering, 71: 102-118.
 
 Cardiff, P. et al., 2018. An open-source finite volume toolbox for solid mechanics and fluid-solid interaction simulations. arXiv preprint arXiv:1808.10736.
