@@ -29,9 +29,7 @@ Make some modifications in the comilation files, run in a terminal:
 
 `sed -i '35i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
 
-`echo "\
-    -lwaveGeneration \
-    -lwaveAbsorption" >> ../Make/options`
+`echo "\ -lwaveGeneration \ -lwaveAbsorption" >> ../Make/options`
     
 `echo "\
     -lwaveGeneration \
