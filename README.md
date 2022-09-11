@@ -31,7 +31,7 @@ Make some modifications in the compilation files, run in a terminal:
 
 `sed -i '35i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
 
-`sed -i '$s/$/&\\ -lwaveGeneration \\ -lwaveAbsorption/' ../Make/options ../../../applications/solvers/solids4Foam/Make/options`
+`sed -i '$s/$/& \\ -lwaveGeneration \\ -lwaveAbsorption/' ../Make/options ../../../applications/solvers/solids4Foam/Make/options`
 
 ## Basic compilation guide
 The compilation is straightforward, simply run the following script from the [olaFlow](https://olaflow.github.io) base folder:
