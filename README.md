@@ -1,7 +1,7 @@
-olaFluid
+wave2solids
 ======
 # Description
-[olaFuid](https://github.com/huzhengyu/olaFluid) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://github.com/phicau/olaFlow) and the fluid-strucutre-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
+[wave2solids](https://github.com/huzhengyu/wave2solids) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://github.com/phicau/olaFlow) and the fluid-strucutre-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
 
 This free and open-source project is committed to enabling the fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
 
@@ -23,13 +23,13 @@ Go to the [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release
 
 `cd solids4foam-release/src/solids4FoamModels/fluidModels/`
 
-To get a copy of the combined fluid model [olaFuid](https://github.com/huzhengyu/olaFluid), run in a terminal:
+To get a copy of the combined fluid model [wave2solids](https://github.com/huzhengyu/wave2solids), run in a terminal:
 
-`git clone https://github.com/huzhengyu/olaFluid.git`
+`git clone https://github.com/huzhengyu/wave2solids.git`
 
 Make some modifications in the compilation files, run in a terminal:
 
-`sed -i '35i fluidModels/olaFluid/olaFluid.C' ../Make/files.foamextend`
+`sed -i '35i fluidModels/wave2solids/wave2solids.C' ../Make/files.foamextend`
 
 `sed -i '$s/$/& \\\n\t-lwaveGeneration \\\n\t-lwaveAbsorption/' ../Make/options ../../../applications/solvers/solids4Foam/Make/options`
 
