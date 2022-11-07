@@ -5,8 +5,6 @@ wave2solids
 
 This free and open-source project is committed to enabling the fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
 
-The paper for implementing and applying this model has been submitted to Coastal Engineering.
-
 # Download and compilation
 ## Basic download guide
 To get set up, you must first install [foam-extend-4.0](https://github.com/Unofficial-Extend-Project-Mirror/foam-extend-foam-extend-4.0).
@@ -53,6 +51,8 @@ Go to the Tutorials/Wall folder, and run in a terminal:
 Feel free to modify the phrase and adapt it to your own needs.
 
 # References
+Hu, Z., Huang, L. and Li, Y., 2022. Fully-coupled hydroelastic modelling of a deformable wall in waves. Coastal Engineering: 104245.
+
 Higuera, P., Lara, J.L. and Losada, I.J., 2013. Realistic wave generation and active wave absorption for navier–stokes models: Application to openfoam®. Coastal Engineering, 71: 102-118.
 
 Cardiff, P. et al., 2018. An open-source finite volume toolbox for solid mechanics and fluid-solid interaction simulations. arXiv preprint arXiv:1808.10736.
