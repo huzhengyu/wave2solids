@@ -32,6 +32,7 @@ Description
 Author
     Philip Cardiff, UCD. All rights reserved.
     Zeljko Tukovic, FSB Zagreb.  All rights reserved.
+    Zhengyu Hu, NUS. All rights reserved.
 
 SourceFiles
     wave2solids.C
@@ -68,9 +69,6 @@ class wave2solids
     public fluidModel
 {
     // Private data
-    IOdictionary waveDictionary;
-	dimensionedVector referencePoint;        
-	scalar sL;
 
 	//- pd
 	volScalarField pd;

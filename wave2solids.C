@@ -62,20 +62,6 @@ wave2solids::wave2solids
 :
     fluidModel(typeName, runTime, region),
 
-    waveDictionary
-    (
-        IOobject
-        (
-            "waveDict",
-            runTime.constant(),
-            mesh(),
-            IOobject::MUST_READ,
-            IOobject::NO_WRITE
-        )
-    ),
-    referencePoint("NULL", dimLength, vector::zero),   
-    sL(readScalar(waveDictionary.lookup("setWaterDepth"))),
-
     pd
     (
         IOobject
@@ -134,8 +120,8 @@ wave2solids::wave2solids
         rho1*phi()
     ),
     
-    gh("gh", g() & (mesh().C()- referencePoint)),
-    ghf("ghf", g() & (mesh().Cf()- referencePoint)),
+    gh("gh", g() & mesh().C()),
+    ghf("ghf", g() & mesh().Cf()),
     pdRefCell(0),
     pdRefValue(0.0),
     pRefValue(0.0),
@@ -148,11 +134,6 @@ wave2solids::wave2solids
 {
     UisRequired();
     
-    // Make a positive unit vector along the direction of gravity
-    referencePoint.value() = g().value()/Foam::mag(g().value());
-    referencePoint.value() = Foam::cmptMag(referencePoint.value());
-      // Make the sea level the reference level
-    referencePoint.value() *= sL;
     // Reset p dimensions
     Info<< "Resetting the dimensions of p" << endl;
     p().dimensions().reset(dimPressure);
@@ -237,10 +218,8 @@ bool wave2solids::evolve()
     }
 
     // Update gh fields as the mesh may have moved
-    gh = g() & (mesh.C() - referencePoint);
-    ghf = g() & (mesh.Cf() - referencePoint);
-    // gh_ = g() & (mesh.C() - referencePoint);
-    // ghf_ = g() & (mesh.Cf()- referencePoint);
+    gh = g() & mesh.C();
+    ghf = g() & mesh.Cf();
 
     //if (correctPhi && meshChanged)
     if (meshChanged)
