@@ -51,7 +51,7 @@ Go to the Tutorials/Wall folder, and run in a terminal:
 Feel free to modify the phrase and adapt it to your own needs.
 
 # References
-Hu, Z., Huang, L. and Li, Y., 2022. Fully-coupled hydroelastic modelling of a deformable wall in waves. Coastal Engineering: 104245.
+Hu, Z., Huang, L. and Li, Y., 2023. Fully-coupled hydroelastic modeling of a deformable wall in waves. Coastal Engineering, 179: 104245.
 
 Higuera, P., Lara, J.L. and Losada, I.J., 2013. Realistic wave generation and active wave absorption for navier–stokes models: Application to openfoam®. Coastal Engineering, 71: 102-118.
 
