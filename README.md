@@ -1,9 +1,9 @@
 wave2solids
 ======
 # Description
-[wave2solids](https://github.com/huzhengyu/wave2solids) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://github.com/phicau/olaFlow) and the fluid-strucutre-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
+[wave2solids](https://github.com/huzhengyu/wave2solids) is a numerical wave-structure-interaction (WSI) model combining the wave generation toolbox [olaFlow](https://github.com/phicau/olaFlow) and the fluid-structure-interaction (FSI) toolbox [solids4Foam](https://bitbucket.org/philip_cardiff/solids4foam-release/src/master/) in the framework of OpenFOAM.
 
-This free and open-source project is committed to enabling the fully-coupled simulation of wave interactions with flexible structures to the foam-extend communities.
+This free and open-source project is committed to enabling the fully coupled simulation of wave interactions with flexible structures to the foam-extend communities.
 
 # Download and compilation
 ## Basic download guide
@@ -25,7 +25,7 @@ To get a copy of the combined fluid model [wave2solids](https://github.com/huzhe
 
 `git clone https://github.com/huzhengyu/wave2solids.git`
 
-Make some modifications in the compilation files, run in a terminal:
+Make some modifications in the compilation files, and run them in a terminal:
 
 `sed -i '35i fluidModels/wave2solids/wave2solids.C' ../Make/files.foamextend`
 
